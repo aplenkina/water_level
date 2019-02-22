@@ -27,6 +27,7 @@ function getMaxWaterLevel($array) {
 	$levels = [];
 	$count = count($array);
 	for ($i = 1; $i < $count; $i++) {
+
 		if ($array[$i - 1] <= $array[$i]) {
 			continue;
 		}
@@ -45,6 +46,6 @@ function getMaxWaterLevel($array) {
 			$levels[] = $max - $min;
 		}
 	}
-return ($levels) ? max($levels) : 0;
+	return ($levels) ? max($levels) : 0;
 }
 
